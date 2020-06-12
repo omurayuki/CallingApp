@@ -1,6 +1,8 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlinx-serialization'
 
 android {
     compileSdkVersion 30
@@ -25,10 +27,20 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.3.0'
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation project(':model')
+
+    implementation Dep.kotlin.stdlib
+    implementation Dep.kotlin.serialization
+
+    implementation Dep.androidx.room.runtime
+    api Dep.androidx.room.ktx
+    kapt Dep.androidx.room.compiler
+    implementation Dep.androidx.lifecycle.livedata
+    api Dep.androidx.lifecycle.livedata_ktx
+
+    implementation Dep.dagger.core
+    kapt Dep.dagger.apt.compiler
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'

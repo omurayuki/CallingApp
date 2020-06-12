@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs.kotlin"
 
 android {
     compileSdkVersion 30
@@ -22,16 +24,64 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+kapt {
+    useBuildCache = true
 }
 
 dependencies {
-    implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.1.0'
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation project(':data:repository')
+    implementation project(':data:db')
+    implementation project(':data:api')
+    implementation project(':data:preferences')
+    implementation project(':model')
+
+    implementation Dep.kotlin.stdlib
+
+    implementation Dep.androidx.core_ktx
+    implementation Dep.androidx.appcompat
+    implementation Dep.androidx.fragment_ktx
+    implementation Dep.androidx.lifecycle.extension
+    implementation Dep.androidx.lifecycle.livedata_ktx
+    implementation Dep.androidx.lifecycle.viewmodel_ktx
+    implementation Dep.androidx.lifecycle.savedstate
+    implementation Dep.androidx.navigation.fragment_ktx
+    implementation Dep.androidx.navigation.ui_ktx
+    implementation Dep.androidx.constraintlayout
+    implementation Dep.material
+
+    implementation Dep.dagger.core
+    implementation Dep.dagger.android_plat
+    implementation Dep.dagger.android_support
+    kapt Dep.dagger.apt.compiler
+    kapt Dep.dagger.apt.android
+
+    implementation Dep.groupie.core
+    implementation Dep.groupie.kotlin
+
+    implementation Dep.glide.core
+//    implementation Dep.glide.annotations
+//    kapt Dep.glide.apt_compiler
+    implementation Dep.timber
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
 }
+
+//apply plugin: 'com.google.gms.google-services'
