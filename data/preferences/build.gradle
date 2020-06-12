@@ -12,6 +12,7 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -38,6 +39,7 @@ dependencies {
     implementation Dep.kotlin.stdlib
 
     implementation Dep.androidx.core_ktx
+    implementation 'com.android.support:multidex:1.0.3'
 
     implementation Dep.dagger.core
     kapt Dep.dagger.apt.compiler
