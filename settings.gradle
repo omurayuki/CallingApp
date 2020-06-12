@@ -1,4 +1,9 @@
-include ':model'
+include ':data:repository'
+include ':data:preferences'
+include ':data:api'
+include ':data:db'
+include ':api'
 include ':data'
+include ':model'
 include ':app'
 rootProject.name = "CallingApp"
