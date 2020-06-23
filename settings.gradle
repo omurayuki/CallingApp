@@ -1,3 +1,4 @@
+include ':data:api'
 include ':data:repository'
 include ':data:preferences'
 include ':data:db'

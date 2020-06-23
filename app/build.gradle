@@ -47,7 +47,7 @@ kapt {
 dependencies {
     implementation project(':data:repository')
     implementation project(':data:db')
-//    implementation project(':data:api')
+    implementation project(':data:api')
     implementation project(':data:preferences')
     implementation project(':model')
 

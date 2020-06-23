@@ -2,6 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlinx-serialization'
 
 android {
     compileSdkVersion 30
@@ -31,14 +32,14 @@ android {
 
 dependencies {
     implementation project(':model')
-    implementation project(':data:db')
-    implementation project(':data:api')
 
     implementation Dep.kotlin.stdlib
     implementation Dep.kotlin.serialization
 
     implementation Dep.androidx.lifecycle.livedata
     api Dep.androidx.lifecycle.livedata_ktx
+
+    api Dep.firebase.firestore_ktx
 
     implementation Dep.dagger.core
     kapt Dep.dagger.apt.compiler
