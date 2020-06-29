@@ -39,7 +39,8 @@ dependencies {
     implementation Dep.androidx.lifecycle.livedata
     api Dep.androidx.lifecycle.livedata_ktx
 
-    api Dep.firebase.firestore_ktx
+    implementation platform(Dep.firebase.bom)
+    api Dep.firebase.database_ktx
 
     implementation Dep.dagger.core
     kapt Dep.dagger.apt.compiler
