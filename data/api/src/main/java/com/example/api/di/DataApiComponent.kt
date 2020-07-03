@@ -13,6 +13,7 @@ import dagger.Component
 )
 
 interface DataApiComponent {
+
     val slackService: SlackService
 
     val firebaseDbClient: FirebaseDbClient

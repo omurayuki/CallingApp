@@ -12,7 +12,7 @@ import dagger.Component
 )
 interface DbComponent {
 
-    val employeeDao: MemberDao
+    val memberDao: MemberDao
 
     @Component.Factory
     interface Factory {

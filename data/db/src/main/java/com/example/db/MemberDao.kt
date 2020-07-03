@@ -10,10 +10,10 @@ import com.example.model.Member
 interface MemberDao {
 
     @Transaction
-    fun invalidateWith(employee: List<Member>): List<Long> {
+    fun invalidateWith(member: List<Member>): List<Long> {
         // idがあるのでもう少し効率的に,削除分だけ消してupcertにしたほうが良い?
         deleteAll()
-        return insertAll(employee)
+        return insertAll(member)
     }
 
     // 返り値はrowIDのリスト
