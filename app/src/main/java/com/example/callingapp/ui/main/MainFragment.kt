@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.callingapp.R
 import com.example.callingapp.di.Injected
+import com.example.callingapp.ui.service.meeting.MeetingFragment
 import kotlinx.android.synthetic.main.main_fragment.*
 import javax.inject.Inject
 
