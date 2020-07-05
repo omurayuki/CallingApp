@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="#ccc"
+    tools:context=".ui.main.MainFragment"
+    >
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_center_v"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_center_h"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2"
+        />
+
+    <com.example.callingapp.widget.MainButton
+        android:id="@+id/logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/space_default"
+        android:layout_marginEnd="@dimen/space_default"
+        android:layout_marginBottom="@dimen/space_default"
+        app:layout_constraintBottom_toBottomOf="@id/guide_center_h"
+        app:layout_constraintEnd_toStartOf="@+id/guide_center_v"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/reception"
+        app:title_en="@string/menu_appointment_en"
+        app:title_jp="@string/menu_appointment_jp"
+        />
+
+    <com.example.callingapp.widget.MainButton
+        android:id="@+id/appointment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/space_default"
+        android:layout_marginEnd="@dimen/space_default"
+        android:layout_marginBottom="@dimen/space_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guide_center_v"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guide_center_h"
+        app:title_en="@string/menu_appointment_en"
+        app:title_jp="@string/menu_appointment_jp"
+        />
+
+    <com.example.callingapp.widget.MainButton
+        android:id="@+id/reception"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/space_default"
+        app:layout_constraintBottom_toTopOf="@id/jobInterview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guide_center_v"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title_en="@string/menu_reception_en"
+        app:title_jp="@string/menu_reception_jp"
+        />
+
+    <com.example.callingapp.widget.MainButton
+        android:id="@+id/jobInterview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/space_default"
+        app:layout_constraintBottom_toTopOf="@+id/delivery"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guide_center_v"
+        app:layout_constraintTop_toBottomOf="@id/reception"
+        app:title_en="@string/menu_job_interview_en"
+        app:title_jp="@string/menu_job_interview_jp"
+        />
+
+    <com.example.callingapp.widget.MainButton
+        android:id="@+id/delivery"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/space_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guide_center_v"
+        app:layout_constraintTop_toBottomOf="@id/jobInterview"
+        app:title_en="@string/menu_delivery_en"
+        app:title_jp="@string/menu_delivery_jp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
