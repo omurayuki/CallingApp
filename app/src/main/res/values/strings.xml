@@ -1,3 +1,38 @@
 <resources>
-    <string name="app_name">CallingApp</string>
+    <string name="app_name">calling-app</string>
+
+    <string name="meeting">meeting</string>
+
+    <string name="menu_appointment_jp">お打ち合わせ</string>
+    <string name="menu_appointment_en">Appointment</string>
+    <string name="menu_reception_jp">総合受付</string>
+    <string name="menu_reception_en">Reception</string>
+    <string name="menu_job_interview_jp">面接</string>
+    <string name="menu_job_interview_en">Job Interview</string>
+    <string name="menu_delivery_jp">配送業者</string>
+    <string name="menu_delivery_en">Delivery</string>
+
+    <!--  総合受付画面  -->
+    <string name="title_call">入力後、呼び出しボタンをタップしてください</string>
+    <string name="title_calling">呼び出し中です...</string>
+    <string name="reception_company">貴社名</string>
+    <string name="reception_name">氏名</string>
+    <string name="reception_purpose">ご訪問目的（任意）</string>
+    <string name="reception_call">呼び出す</string>
+
+    <string name="login_password">パスワード</string>
+    <string name="login_button">ログイン</string>
+    <string name="login_back_button">戻る</string>
+
+    <string name="top_employees_list">メンバー表示</string>
+    <string name="top_sync_button">メンバーの同期</string>
+
+    <!-- 管理画面 -->
+    <string name="setting_name">ユーザー名</string>
+    <string name="setting_password">パスワード</string>
+    <string name="setting_slack_channel">slackチャンネル名</string>
+    <string name="setting_edit_complete">編集完了</string>
+
+
+    <string name="done_message">受付しました。少々お待ち下さい。</string>
 </resources>

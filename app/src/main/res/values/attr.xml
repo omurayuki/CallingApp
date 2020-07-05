@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MainButton">
+        <attr name="title_en" format="string|reference"/>
+        <attr name="title_jp" format="string|reference"/>
+    </declare-styleable>
+</resources>
