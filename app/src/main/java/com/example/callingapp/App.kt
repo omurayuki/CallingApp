@@ -1,6 +1,7 @@
 package com.example.callingapp
 
 import android.app.Application
+import com.example.callingapp.di.AppInjector
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasAndroidInjector
@@ -20,6 +21,6 @@ class App: Application(), HasAndroidInjector {
             Timber.plant(Timber.DebugTree())
         }
 
-//        AppInjector
+        AppInjector.init(this)
     }
 }

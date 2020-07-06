@@ -10,7 +10,7 @@ buildscript {
                 lifecycle                : '2.2.0-alpha04',
                 savedstate               : '1.0.0-beta01',
                 room                     : '2.2.1',
-                navigation               : '2.1.0',
+                navigation               : '2.3.0',
                 work                     : '2.2.0',
                 recyclerview             : '1.0.0',
                 paging                   : '2.1.0',
