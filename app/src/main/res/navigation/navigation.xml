@@ -66,4 +66,16 @@
             />
     </fragment>
 
+    <fragment
+        android:id="@+id/navigation_done"
+        android:name="com.example.callingapp.ui.service.done.DoneFragment"
+        tools:layout="@layout/done_fragment"
+        >
+
+        <action
+            android:id="@+id/action_calling_to_done"
+            app:destination="@+id/navigation_home"
+            />
+    </fragment>
+
 </navigation>
