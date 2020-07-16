@@ -32,11 +32,6 @@ class TopFragment : Fragment(R.layout.top_fragment), Injected {
             viewModel.fetch()
         }
 
-        settings_button.setOnClickListener {
-            findNavController().navigate(R.id.action_top_to_setting)
-            Timber.d("show setting")
-        }
-
         back_button.setOnClickListener {
             findNavController().popBackStack()
         }

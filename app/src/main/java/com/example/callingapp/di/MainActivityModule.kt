@@ -8,9 +8,6 @@ import com.example.callingapp.ui.admin.top.TopFragment
 import com.example.callingapp.ui.main.MainFragment
 import com.example.callingapp.ui.service.calling.CallingFragment
 import com.example.callingapp.ui.service.done.DoneFragment
-import com.example.callingapp.ui.service.meeting.InterviewDialogFragment
-import com.example.callingapp.ui.service.meeting.MeetingDialogFragment
-import com.example.callingapp.ui.service.meeting.MeetingFragment
 import com.example.callingapp.ui.service.reception.ReceptionFragment
 import dagger.Binds
 import dagger.Module
@@ -29,9 +26,6 @@ interface MainActivityModule {
     fun contributeReceptionFragment(): ReceptionFragment
 
     @ContributesAndroidInjector
-    fun contributeMeetingFragment(): MeetingFragment
-
-    @ContributesAndroidInjector
     fun contributeLoginFragment(): LoginFragment
 
     @ContributesAndroidInjector
@@ -45,10 +39,4 @@ interface MainActivityModule {
 
     @ContributesAndroidInjector
     fun contributeCallingFragment(): CallingFragment
-
-    @ContributesAndroidInjector
-    fun contributeMeetingDialogFragment(): MeetingDialogFragment
-
-    @ContributesAndroidInjector
-    fun contributeJobInterviewDialogFragment(): InterviewDialogFragment
 }

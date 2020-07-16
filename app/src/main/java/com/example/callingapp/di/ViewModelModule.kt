@@ -8,8 +8,6 @@ import com.example.callingapp.ui.admin.top.TopViewModel
 import com.example.callingapp.ui.main.MainViewModel
 import com.example.callingapp.ui.service.calling.CallingViewModel
 import com.example.callingapp.ui.service.done.DoneViewModel
-import com.example.callingapp.ui.service.meeting.MeetingCallViewModel
-import com.example.callingapp.ui.service.meeting.MeetingViewModel
 import com.example.callingapp.ui.service.reception.ReceptionViewModel
 import dagger.Binds
 import dagger.Module
@@ -25,16 +23,6 @@ interface ViewModelModule {
     @IntoMap
     @ViewModelKey(MainViewModel::class)
     fun bindMainViewModel(mainViewModel: MainViewModel): ViewModel
-
-    @Binds
-    @IntoMap
-    @ViewModelKey(MeetingViewModel::class)
-    fun bindMeetingViewModel(meetingViewModel: MeetingViewModel): ViewModel
-
-    @Binds
-    @IntoMap
-    @ViewModelKey(MeetingCallViewModel::class)
-    fun bindMeetingCallViewModel(meetingViewModel: MeetingCallViewModel): ViewModel
 
     @Binds
     @IntoMap

@@ -3,6 +3,8 @@
 
     <string name="meeting">meeting</string>
 
+    <string name="menu_add_member_jp">メンバーを追加</string>
+    <string name="menu_add_member_en">Add Member</string>
     <string name="menu_appointment_jp">お打ち合わせ</string>
     <string name="menu_appointment_en">Appointment</string>
     <string name="menu_reception_jp">総合受付</string>

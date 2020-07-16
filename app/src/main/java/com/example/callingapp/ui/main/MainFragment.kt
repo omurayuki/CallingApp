@@ -11,7 +11,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.callingapp.R
 import com.example.callingapp.di.Injected
-import com.example.callingapp.ui.service.meeting.MeetingFragment
 import kotlinx.android.synthetic.main.main_fragment.*
 import javax.inject.Inject
 
@@ -28,24 +27,12 @@ class MainFragment: Fragment(R.layout.main_fragment), Injected {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        logo.setOnClickListener {
+        memberAdding.setOnClickListener {
             findNavController().navigate(R.id.action_home_to_login)
         }
 
         reception.setOnClickListener {
             findNavController().navigate(R.id.action_home_to_reception)
-        }
-
-        appointment.setOnClickListener {
-            findNavController().navigate(R.id.action_home_to_meeting, bundleOf("type" to MeetingFragment.TYPE_APPOINTMENT))
-        }
-
-        jobInterview.setOnClickListener {
-            findNavController().navigate(R.id.action_home_to_job_inetrview, bundleOf("type" to MeetingFragment.TYPE_JOB_MEETING))
-        }
-
-        delivery.setOnClickListener {
-            Toast.makeText(requireContext(), "Tap a Delivery button", Toast.LENGTH_SHORT).show()
         }
     }
 }

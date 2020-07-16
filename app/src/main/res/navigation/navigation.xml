@@ -13,16 +13,6 @@
         >
 
         <action
-            android:id="@+id/action_home_to_meeting"
-            app:destination="@+id/navigation_meeting"
-            />
-
-        <action
-            android:id="@+id/action_home_to_job_inetrview"
-            app:destination="@+id/navigation_meeting"
-            />
-
-        <action
             android:id="@+id/action_home_to_reception"
             app:destination="@+id/navigation_reception"
             />
@@ -46,27 +36,6 @@
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_meeting"
-        android:name="com.example.callingapp.ui.service.meeting.MeetingFragment"
-        >
-
-        <argument
-            android:name="type"
-            app:argType="integer"
-            />
-
-        <action
-            android:id="@+id/action_meeting_to_meeting_dialog"
-            app:destination="@+id/navigation_meeting_dialog"
-            />
-
-        <action
-            android:id="@+id/action_meeting_to_job_interview_dialog"
-            app:destination="@+id/navigation_job_interview_dialog"
-            />
-    </fragment>
-
-    <fragment
         android:id="@+id/navigation_login"
         android:name="com.example.callingapp.ui.admin.login.LoginFragment"
         tools:layout="@layout/login_fragment"
@@ -76,18 +45,6 @@
             android:id="@+id/action_login_to_top"
             app:destination="@+id/navigation_top"
             app:popUpTo="@+id/navigation_home"
-            />
-    </fragment>
-
-    <fragment
-        android:id="@+id/navigation_top"
-        android:name="com.example.callingapp.ui.admin.top.TopFragment"
-        tools:layout="@layout/top_fragment"
-        >
-
-        <action
-            android:id="@+id/action_top_to_setting"
-            app:destination="@+id/navigation_setting"
             />
     </fragment>
 
@@ -108,45 +65,5 @@
             app:destination="@+id/navigation_done"
             />
     </fragment>
-
-    <fragment
-        android:id="@+id/navigation_done"
-        android:name="com.example.callingapp.ui.service.done.DoneFragment"
-        tools:layout="@layout/done_fragment"
-        />
-
-    <dialog
-        android:id="@+id/navigation_meeting_dialog"
-        android:name="com.example.callingapp.ui.service.meeting.MeetingDialogFragment"
-        tools:layout="@layout/meeting_dialog_fragment"
-        >
-
-        <argument
-            android:name="member"
-            app:argType="com.example.model.Member"
-            />
-
-        <action
-            android:id="@+id/action_meeting_dialog_to_calling"
-            app:destination="@+id/navigation_calling"
-            />
-    </dialog>
-
-    <dialog
-        android:id="@+id/navigation_job_interview_dialog"
-        android:name="com.example.callingapp.ui.service.meeting.InterviewDialogFragment"
-        tools:layout="@layout/interview_dialog_fragment"
-        >
-
-        <argument
-            android:name="member"
-            app:argType="com.example.model.Member"
-            />
-
-        <action
-            android:id="@+id/action_job_interview_dialog_to_calling"
-            app:destination="@+id/navigation_calling"
-            />
-    </dialog>
 
 </navigation>
